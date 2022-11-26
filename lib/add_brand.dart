@@ -5,7 +5,6 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 // ignore: deprecated_member_use
 import 'package:firebase/firebase.dart' as fb;
-import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:uuid/uuid.dart';
 
 class AddModel extends StatefulWidget {
@@ -36,7 +35,7 @@ class _AddCategoryState extends State<AddModel> {
   var uuid = Uuid();
   List<dynamic> categories = [];
   dynamic selectedCategory;
-  bool imgLoad = false;
+ // bool imgLoad = false;
 
   getCats() async {
     FirebaseFirestore.instance.collection("make").get().then((value) {
@@ -64,11 +63,7 @@ class _AddCategoryState extends State<AddModel> {
         i++;
       });
 
-      if (i + 1 == value.docs.length) {
-        setState(() {
-          imgLoad = true;
-        });
-      }
+
     });
   }
 
@@ -96,13 +91,7 @@ class _AddCategoryState extends State<AddModel> {
                           width: width * 0.1,
                           height: height * 0.05,
                           decoration: BoxDecoration(
-                              border: const GradientBoxBorder(
-                                gradient: LinearGradient(colors: [
-                                  Color.fromARGB(255, 0, 178, 169),
-                                  Color.fromARGB(255, 0, 106, 101),
-                                ]),
-                                width: 1,
-                              ),
+
                               borderRadius: BorderRadius.circular(5)),
                           child: Center(child: Text('Categories Panel'))),
                       Row(
@@ -293,10 +282,10 @@ class _AddCategoryState extends State<AddModel> {
                                                                   .validate()) {
                                                                 if (image
                                                                     .isEmpty) {
-                                                                  Scaffold.of(
-                                                                          context)
-                                                                      .showSnackBar(
-                                                                          _missingData);
+                                                                  // Scaffold.of(
+                                                                  //         context)
+                                                                  //     .showSnackBar(
+                                                                  //         _missingData);
                                                                 } else {
                                                                   categoryCollection
                                                                       .doc(
@@ -331,10 +320,10 @@ class _AddCategoryState extends State<AddModel> {
                                                                     img = '';
                                                                     //image='';
                                                                   });
-                                                                  Scaffold.of(
-                                                                          context)
-                                                                      .showSnackBar(
-                                                                          _success);
+                                                                  // Scaffold.of(
+                                                                  //         context)
+                                                                  //     .showSnackBar(
+                                                                  //         _success);
                                                                 }
                                                               }
                                                             },
@@ -716,8 +705,8 @@ class _AddCategoryState extends State<AddModel> {
                                                                                 '';
                                                                             //image='';
                                                                           });
-                                                                          Scaffold.of(context)
-                                                                              .showSnackBar(_success);
+                                                                          // Scaffold.of(context)
+                                                                          //     .showSnackBar(_success);
                                                                         }
                                                                       },
                                                                       child: Container(

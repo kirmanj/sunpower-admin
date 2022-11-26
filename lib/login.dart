@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:explore/homeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -30,13 +29,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   width: width * 0.1,
                   height: height * 0.05,
                   decoration: BoxDecoration(
-                      border: const GradientBoxBorder(
-                        gradient: LinearGradient(colors: [
-                          Color.fromARGB(255, 0, 178, 169),
-                          Color.fromARGB(255, 0, 106, 101),
-                        ]),
-                        width: 1,
-                      ),
+
                       borderRadius: BorderRadius.circular(5)),
                   child: Center(child: Text('User Panel'))),
             ),
@@ -79,17 +72,11 @@ class _LoginScreenState extends State<LoginScreen> {
                                       width: width * 0.1,
                                       height: height * 0.05,
                                       decoration: BoxDecoration(
-                                          border: const GradientBoxBorder(
-                                            gradient: LinearGradient(colors: [
-                                              Color.fromARGB(255, 0, 178, 169),
-                                              Color.fromARGB(255, 0, 106, 101),
-                                            ]),
-                                            width: 1,
-                                          ),
+
                                           borderRadius:
-                                              BorderRadius.circular(5)),
+                                          BorderRadius.circular(5)),
                                       child:
-                                          Center(child: Text('Add New User'))),
+                                      Center(child: Text('Add New User'))),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
@@ -100,7 +87,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                       labelText: 'Email',
                                       border: OutlineInputBorder(
                                         borderRadius:
-                                            BorderRadius.circular(6.0),
+                                        BorderRadius.circular(6.0),
                                       ),
                                     ),
                                     onChanged: (value) {
@@ -119,7 +106,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                       labelText: 'Name',
                                       border: OutlineInputBorder(
                                         borderRadius:
-                                            BorderRadius.circular(6.0),
+                                        BorderRadius.circular(6.0),
                                       ),
                                     ),
                                     onChanged: (value) {
@@ -138,7 +125,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                       labelText: 'Password',
                                       border: OutlineInputBorder(
                                         borderRadius:
-                                            BorderRadius.circular(6.0),
+                                        BorderRadius.circular(6.0),
                                       ),
                                     ),
                                     onChanged: (value) {
@@ -153,12 +140,12 @@ class _LoginScreenState extends State<LoginScreen> {
                                       if (_formKey.currentState!.validate()) {
                                         auth
                                             .createUserWithEmailAndPassword(
-                                                email: _email,
-                                                password: _password)
+                                            email: _email,
+                                            password: _password)
                                             .then((_) {
                                           FirebaseFirestore.instance
                                               .collection('users')
-                                              .doc()
+                                              .doc(auth.currentUser!.uid)
                                               .set({
                                             "username": _name,
                                             "email": _email,
@@ -170,8 +157,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                                   builder: (context) =>
                                                       HomeScreen()));
                                         });
-                                        Scaffold.of(context)
-                                            .showSnackBar(_success);
+                                        // Scaffold.of(context)
+                                        //     .showSnackBar(_success);
                                       }
                                     },
                                     child: Container(
@@ -189,7 +176,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                               end: Alignment.centerRight,
                                             ),
                                             borderRadius:
-                                                const BorderRadius.all(
+                                            const BorderRadius.all(
                                               Radius.circular(25.0),
                                             ),
                                             boxShadow: [
@@ -243,13 +230,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 width: width * 0.1,
                                 height: height * 0.05,
                                 decoration: BoxDecoration(
-                                    border: const GradientBoxBorder(
-                                      gradient: LinearGradient(colors: [
-                                        Color.fromARGB(255, 0, 178, 169),
-                                        Color.fromARGB(255, 0, 106, 101),
-                                      ]),
-                                      width: 1,
-                                    ),
+
                                     borderRadius: BorderRadius.circular(5)),
                                 child: Center(child: Text('Wholesale Users'))),
                           ),
@@ -282,12 +263,12 @@ class _LoginScreenState extends State<LoginScreen> {
                                                             255, 0, 106, 101),
                                                       ],
                                                       begin:
-                                                          Alignment.centerLeft,
+                                                      Alignment.centerLeft,
                                                       end:
-                                                          Alignment.centerRight,
+                                                      Alignment.centerRight,
                                                     ),
                                                     borderRadius:
-                                                        const BorderRadius.all(
+                                                    const BorderRadius.all(
                                                       Radius.circular(5.0),
                                                     ),
                                                     boxShadow: [
@@ -300,42 +281,42 @@ class _LoginScreenState extends State<LoginScreen> {
                                                       )
                                                     ]),
                                                 margin:
-                                                    EdgeInsets.only(bottom: 15),
+                                                EdgeInsets.only(bottom: 15),
                                                 child: Center(
                                                   child: Column(
                                                     mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .center,
+                                                    MainAxisAlignment
+                                                        .center,
                                                     children: [
                                                       Text(
                                                         snapshot
                                                             .data.docs[index]
                                                             .data()['username'],
                                                         textAlign:
-                                                            TextAlign.center,
+                                                        TextAlign.center,
                                                         style: TextStyle(
                                                             color:
-                                                                Colors.white),
+                                                            Colors.white),
                                                       ),
-                                                      Text(
-                                                        snapshot
-                                                            .data.docs[index]
-                                                            .data()['email'],
-                                                        textAlign:
-                                                            TextAlign.center,
-                                                        style: TextStyle(
-                                                            color:
-                                                                Colors.white),
-                                                      )
+                                                      // Text(
+                                                      //   snapshot
+                                                      //       .data.docs[index]
+                                                      //       .data()['email'],
+                                                      //   textAlign:
+                                                      //       TextAlign.center,
+                                                      //   style: TextStyle(
+                                                      //       color:
+                                                      //           Colors.white),
+                                                      // )
                                                     ],
                                                   ),
                                                 ),
                                               ));
                                         },
                                         gridDelegate:
-                                            SliverGridDelegateWithFixedCrossAxisCount(
+                                        SliverGridDelegateWithFixedCrossAxisCount(
                                           crossAxisCount:
-                                              width > width * 0.3 ? 4 : 1,
+                                          width > width * 0.3 ? 4 : 1,
                                           childAspectRatio: 2,
                                         ),
                                       ));

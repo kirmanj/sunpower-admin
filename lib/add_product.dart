@@ -9,7 +9,6 @@ import 'package:file_picker/file_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 import 'package:flutter/material.dart';
 import 'package:firebase/firebase.dart' as fb;
-import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:uuid/uuid.dart';
 import 'dart:typed_data';
 
@@ -198,13 +197,7 @@ class _AddProductState extends State<AddProduct> {
                             width: width * 0.1,
                             height: height * 0.05,
                             decoration: BoxDecoration(
-                                border: const GradientBoxBorder(
-                                  gradient: LinearGradient(colors: [
-                                    Color.fromARGB(255, 0, 178, 169),
-                                    Color.fromARGB(255, 0, 106, 101),
-                                  ]),
-                                  width: 1,
-                                ),
+
                                 borderRadius: BorderRadius.circular(5)),
                             child: Center(child: Text('Product Panel'))),
                       ),
@@ -697,8 +690,8 @@ class _AddProductState extends State<AddProduct> {
                                                 .validate()) {
                                               if (categoryID.isEmpty ||
                                                   image.isEmpty) {
-                                                Scaffold.of(context)
-                                                    .showSnackBar(_missingData);
+                                                // Scaffold.of(context)
+                                                //     .showSnackBar(_missingData);
                                               } else {
                                                 menuProducts
                                                     .doc(randomNumber)
@@ -761,8 +754,8 @@ class _AddProductState extends State<AddProduct> {
 
                                                   randomNumber = uuid.v1();
                                                 });
-                                                Scaffold.of(context)
-                                                    .showSnackBar(_success);
+                                                // Scaffold.of(context)
+                                                //     .showSnackBar(_success);
                                               }
                                             }
                                           },

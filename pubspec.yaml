@@ -18,7 +18,7 @@ dependencies:
   firebase_auth: 
   #firebase_auth: ^1.0.0
   barcode_widget:
-  gradient_borders: ^0.2.0
+  #gradient_borders: ^0.2.0
   intl: ^0.17.0
   #firebase_storage: ^8.0.0
   cloud_firestore: ^1.0.0

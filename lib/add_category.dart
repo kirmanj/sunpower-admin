@@ -5,7 +5,6 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 // ignore: deprecated_member_use
 import 'package:firebase/firebase.dart' as fb;
-import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:uuid/uuid.dart';
 
 class AddCategory extends StatefulWidget {
@@ -77,13 +76,7 @@ class _AddCategoryState extends State<AddCategory> {
                           width: width * 0.1,
                           height: height * 0.05,
                           decoration: BoxDecoration(
-                              border: const GradientBoxBorder(
-                                gradient: LinearGradient(colors: [
-                                  Color.fromARGB(255, 0, 178, 169),
-                                  Color.fromARGB(255, 0, 106, 101),
-                                ]),
-                                width: 1,
-                              ),
+
                               borderRadius: BorderRadius.circular(5)),
                           child: Center(child: Text('Categories Panel'))),
                       Row(
@@ -261,8 +254,8 @@ class _AddCategoryState extends State<AddCategory> {
                                               .validate()) {
                                             if (image.isEmpty) {
                                               print('select category or Image');
-                                              Scaffold.of(context)
-                                                  .showSnackBar(_missingData);
+                                              // Scaffold.of(context)
+                                              //     .showSnackBar(_missingData);
                                             } else {
                                               categoryCollection
                                                   .doc(randomNumber)
@@ -285,8 +278,8 @@ class _AddCategoryState extends State<AddCategory> {
                                                 img = '';
                                                 //image='';
                                               });
-                                              Scaffold.of(context)
-                                                  .showSnackBar(_success);
+                                              // Scaffold.of(context)
+                                              //     .showSnackBar(_success);
                                             }
                                           }
                                         },

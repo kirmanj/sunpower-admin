@@ -1,6 +1,7 @@
 import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
 import 'package:explore/homeScreen.dart';
 import 'package:explore/scrollbehaivori.dart';
+import 'package:explore/web/order_history.dart';
 import 'package:explore/web/screens/home_page.dart';
 import 'package:explore/web/utils/authentication.dart';
 import 'package:explore/web/utils/theme_data.dart';
@@ -42,10 +43,11 @@ class _MyAppState extends State<MyApp> {
       title: 'Explore',
       theme: lightThemeData,
       scrollBehavior: MyCustomScrollBehavior(),
-      darkTheme: darkThemeData,
+     // darkTheme: darkThemeData,
       debugShowCheckedModeBanner: false,
-      themeMode: EasyDynamicTheme.of(context).themeMode,
-      home: HomePage(),
+      //themeMode: EasyDynamicTheme.of(context).themeMode,
+      home:
+      HomeScreen(),
     );
   }
 }
