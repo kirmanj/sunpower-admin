@@ -792,427 +792,429 @@ class _AddProductState extends State<AddProduct> {
                                     ),
                                   ],
                                 ),
-                                child: Column(
-                                  children: [
-                                    Container(
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceAround,
-                                        children: [
-                                          Expanded(
-                                            flex: 1,
-                                            child: TextFormField(
-                                              controller: name,
-                                              validator: (val) {
-                                                if (val!.isEmpty) {
-                                                  return "Enter Product Name";
-                                                } else {
-                                                  return null;
-                                                }
-                                              },
-                                              decoration: InputDecoration(
-                                                hintText: 'Name',
-                                                labelText: 'Name',
-                                                border: OutlineInputBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          6.0),
+                                child: SingleChildScrollView(
+                                  child: Column(
+                                    children: [
+                                      Container(
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceAround,
+                                          children: [
+                                            Expanded(
+                                              flex: 1,
+                                              child: TextFormField(
+                                                controller: name,
+                                                validator: (val) {
+                                                  if (val!.isEmpty) {
+                                                    return "Enter Product Name";
+                                                  } else {
+                                                    return null;
+                                                  }
+                                                },
+                                                decoration: InputDecoration(
+                                                  hintText: 'Name',
+                                                  labelText: 'Name',
+                                                  border: OutlineInputBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            6.0),
+                                                  ),
                                                 ),
                                               ),
                                             ),
-                                          ),
-                                          SizedBox(
-                                            width: width * 0.01,
-                                          ),
-                                          Expanded(
-                                            flex: 1,
-                                            child: TextFormField(
-                                              controller: nameK,
-                                              validator: (val) {
-                                                if (val!.isEmpty) {
-                                                  return "ناوی کاڵاکە بنووسە";
-                                                } else {
-                                                  return null;
-                                                }
-                                              },
-                                              decoration: InputDecoration(
-                                                hintText: 'ناو',
-                                                labelText: 'ناو',
-                                                border: OutlineInputBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          5.0),
+                                            SizedBox(
+                                              width: width * 0.01,
+                                            ),
+                                            Expanded(
+                                              flex: 1,
+                                              child: TextFormField(
+                                                controller: nameK,
+                                                validator: (val) {
+                                                  if (val!.isEmpty) {
+                                                    return "ناوی کاڵاکە بنووسە";
+                                                  } else {
+                                                    return null;
+                                                  }
+                                                },
+                                                decoration: InputDecoration(
+                                                  hintText: 'ناو',
+                                                  labelText: 'ناو',
+                                                  border: OutlineInputBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            5.0),
+                                                  ),
                                                 ),
                                               ),
                                             ),
-                                          ),
-                                          SizedBox(
-                                            width: width * 0.01,
-                                          ),
-                                          Expanded(
-                                            flex: 1,
-                                            child: TextFormField(
-                                              controller: nameA,
-                                              validator: (val) {
-                                                if (val!.isEmpty) {
-                                                  return "اكتب اسم البضاعة";
-                                                } else {
-                                                  return null;
-                                                }
-                                              },
-                                              decoration: InputDecoration(
-                                                hintText: 'اسم',
-                                                labelText: 'اسم',
-                                                border: OutlineInputBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          6.0),
+                                            SizedBox(
+                                              width: width * 0.01,
+                                            ),
+                                            Expanded(
+                                              flex: 1,
+                                              child: TextFormField(
+                                                controller: nameA,
+                                                validator: (val) {
+                                                  if (val!.isEmpty) {
+                                                    return "اكتب اسم البضاعة";
+                                                  } else {
+                                                    return null;
+                                                  }
+                                                },
+                                                decoration: InputDecoration(
+                                                  hintText: 'اسم',
+                                                  labelText: 'اسم',
+                                                  border: OutlineInputBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            6.0),
+                                                  ),
                                                 ),
                                               ),
                                             ),
-                                          ),
 
-                                          //description
-                                        ],
+                                            //description
+                                          ],
+                                        ),
                                       ),
-                                    ),
-                                    SizedBox(
-                                      height: height * 0.0229,
-                                    ),
-                                    Container(
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceAround,
-                                        children: [
-                                          Expanded(
-                                            flex: 1,
-                                            child: TextFormField(
-                                              controller: oemCode,
-                                              validator: (val) {
-                                                if (val!.isEmpty) {
-                                                  return "Enter OEM Code";
-                                                } else {
-                                                  return null;
-                                                }
-                                              },
-                                              decoration: InputDecoration(
-                                                hintText: 'OEM CODE',
-                                                labelText: 'OEM CODE',
-                                                border: OutlineInputBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          6.0),
+                                      SizedBox(
+                                        height: height * 0.0229,
+                                      ),
+                                      Container(
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceAround,
+                                          children: [
+                                            Expanded(
+                                              flex: 1,
+                                              child: TextFormField(
+                                                controller: oemCode,
+                                                validator: (val) {
+                                                  if (val!.isEmpty) {
+                                                    return "Enter OEM Code";
+                                                  } else {
+                                                    return null;
+                                                  }
+                                                },
+                                                decoration: InputDecoration(
+                                                  hintText: 'OEM CODE',
+                                                  labelText: 'OEM CODE',
+                                                  border: OutlineInputBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            6.0),
+                                                  ),
                                                 ),
                                               ),
                                             ),
-                                          ),
-                                          SizedBox(
-                                            width: width * 0.0146,
-                                          ),
-                                          Expanded(
-                                            flex: 1,
-                                            child: TextFormField(
-                                              controller: itemCode,
-                                              validator: (val) {
-                                                if (val!.isEmpty) {
-                                                  return "Enter Item Code";
-                                                } else {
-                                                  return null;
-                                                }
-                                              },
-                                              decoration: InputDecoration(
-                                                hintText: "Item Code",
-                                                labelText: "Item Code",
-                                                border: OutlineInputBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          5.0),
+                                            SizedBox(
+                                              width: width * 0.0146,
+                                            ),
+                                            Expanded(
+                                              flex: 1,
+                                              child: TextFormField(
+                                                controller: itemCode,
+                                                validator: (val) {
+                                                  if (val!.isEmpty) {
+                                                    return "Enter Item Code";
+                                                  } else {
+                                                    return null;
+                                                  }
+                                                },
+                                                decoration: InputDecoration(
+                                                  hintText: "Item Code",
+                                                  labelText: "Item Code",
+                                                  border: OutlineInputBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            5.0),
+                                                  ),
                                                 ),
                                               ),
                                             ),
-                                          ),
-                                          SizedBox(
-                                            width: width * 0.01,
-                                          ),
-                                          Expanded(
-                                            flex: 1,
-                                            child: TextFormField(
-                                              controller: barCode,
-                                              onChanged: (text) {
-                                                setState(() {
-                                                  barcodeT = barCode.text;
-                                                });
-                                              },
-                                              validator: (val) {
-                                                if (val!.isEmpty) {
-                                                  return "Enter Barcode";
-                                                } else {
-                                                  return null;
-                                                }
-                                              },
-                                              decoration: InputDecoration(
-                                                hintText: "Bar Code",
-                                                labelText: "Bar Code",
-                                                border: OutlineInputBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          6.0),
+                                            SizedBox(
+                                              width: width * 0.01,
+                                            ),
+                                            Expanded(
+                                              flex: 1,
+                                              child: TextFormField(
+                                                controller: barCode,
+                                                onChanged: (text) {
+                                                  setState(() {
+                                                    barcodeT = barCode.text;
+                                                  });
+                                                },
+                                                validator: (val) {
+                                                  if (val!.isEmpty) {
+                                                    return "Enter Barcode";
+                                                  } else {
+                                                    return null;
+                                                  }
+                                                },
+                                                decoration: InputDecoration(
+                                                  hintText: "Bar Code",
+                                                  labelText: "Bar Code",
+                                                  border: OutlineInputBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            6.0),
+                                                  ),
                                                 ),
                                               ),
                                             ),
-                                          ),
 
-                                          //description
-                                        ],
+                                            //description
+                                          ],
+                                        ),
                                       ),
-                                    ),
-                                    SizedBox(
-                                      height: height * 0.0229,
-                                    ),
-                                    Container(
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceAround,
-                                        children: [
-                                          Expanded(
-                                            flex: 1,
-                                            child: TextFormField(
-                                              controller: brand,
-                                              validator: (val) {
-                                                if (val!.isEmpty) {
-                                                  return "Enter Brand";
-                                                } else {
-                                                  return null;
-                                                }
-                                              },
-                                              decoration: InputDecoration(
-                                                hintText: 'Brand',
-                                                labelText: 'Brand',
-                                                border: OutlineInputBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          6.0),
+                                      SizedBox(
+                                        height: height * 0.0229,
+                                      ),
+                                      Container(
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceAround,
+                                          children: [
+                                            Expanded(
+                                              flex: 1,
+                                              child: TextFormField(
+                                                controller: brand,
+                                                validator: (val) {
+                                                  if (val!.isEmpty) {
+                                                    return "Enter Brand";
+                                                  } else {
+                                                    return null;
+                                                  }
+                                                },
+                                                decoration: InputDecoration(
+                                                  hintText: 'Brand',
+                                                  labelText: 'Brand',
+                                                  border: OutlineInputBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            6.0),
+                                                  ),
                                                 ),
                                               ),
                                             ),
-                                          ),
-                                          SizedBox(
-                                            width: width * 0.01,
-                                          ),
-                                          Expanded(
-                                            flex: 1,
-                                            child: TextFormField(
-                                              controller: piecesInBox,
-                                              validator: (val) {
-                                                if (val!.isEmpty) {
-                                                  return "Enter Pieces In Box";
-                                                } else {
-                                                  return null;
-                                                }
-                                              },
-                                              decoration: InputDecoration(
-                                                hintText: "Pieces In Box",
-                                                labelText: "Pieces In Box",
-                                                border: OutlineInputBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          5.0),
+                                            SizedBox(
+                                              width: width * 0.01,
+                                            ),
+                                            Expanded(
+                                              flex: 1,
+                                              child: TextFormField(
+                                                controller: piecesInBox,
+                                                validator: (val) {
+                                                  if (val!.isEmpty) {
+                                                    return "Enter Pieces In Box";
+                                                  } else {
+                                                    return null;
+                                                  }
+                                                },
+                                                decoration: InputDecoration(
+                                                  hintText: "Pieces In Box",
+                                                  labelText: "Pieces In Box",
+                                                  border: OutlineInputBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            5.0),
+                                                  ),
                                                 ),
                                               ),
                                             ),
-                                          ),
-                                          SizedBox(
-                                            width: width * 0.01,
-                                          ),
-                                          Expanded(
-                                            flex: 1,
-                                            child: TextFormField(
-                                              controller: volt,
-                                              validator: (val) {
-                                                if (val!.isEmpty) {
-                                                  return "Enter Volt";
-                                                } else {
-                                                  return null;
-                                                }
-                                              },
-                                              decoration: InputDecoration(
-                                                hintText: "Volt",
-                                                labelText: "Volt",
-                                                border: OutlineInputBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          6.0),
+                                            SizedBox(
+                                              width: width * 0.01,
+                                            ),
+                                            Expanded(
+                                              flex: 1,
+                                              child: TextFormField(
+                                                controller: volt,
+                                                validator: (val) {
+                                                  if (val!.isEmpty) {
+                                                    return "Enter Volt";
+                                                  } else {
+                                                    return null;
+                                                  }
+                                                },
+                                                decoration: InputDecoration(
+                                                  hintText: "Volt",
+                                                  labelText: "Volt",
+                                                  border: OutlineInputBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            6.0),
+                                                  ),
                                                 ),
                                               ),
                                             ),
-                                          ),
 
-                                          //description
+                                            //description
+                                          ],
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: height * 0.0229,
+                                      ),
+                                      TextFormField(
+                                        controller: descE,
+                                        validator: (val) {
+                                          if (val!.isEmpty) {
+                                            return "Product Details";
+                                          } else {
+                                            return null;
+                                          }
+                                        },
+                                        decoration: InputDecoration(
+                                          hintText: 'Description',
+                                          labelText: 'Description',
+                                          border: OutlineInputBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(6.0),
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: height * 0.0229,
+                                      ),
+                                      TextFormField(
+                                        controller: descK,
+                                        validator: (val) {
+                                          if (val!.isEmpty) {
+                                            return "وردەکاری کالا";
+                                          } else {
+                                            return null;
+                                          }
+                                        },
+                                        decoration: InputDecoration(
+                                          hintText: 'وردەکاری',
+                                          labelText: 'وردەکاری',
+                                          border: OutlineInputBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(6.0),
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: height * 0.0229,
+                                      ),
+                                      TextFormField(
+                                        controller: descA,
+                                        validator: (val) {
+                                          if (val!.isEmpty) {
+                                            return "تفاصيل السلع";
+                                          } else {
+                                            return null;
+                                          }
+                                        },
+                                        decoration: InputDecoration(
+                                          hintText: 'وصف',
+                                          labelText: 'وصف',
+                                          border: OutlineInputBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(6.0),
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: height * 0.0229,
+                                      ),
+                                      //prices
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Container(
+                                            width: width * 0.15,
+                                            child: TextFormField(
+                                              keyboardType: TextInputType.number,
+                                              controller: cPrice,
+                                              validator: (val) {
+                                                if (val!.isEmpty) {
+                                                  return "Enter price";
+                                                } else {
+                                                  return null;
+                                                }
+                                              },
+                                              decoration: InputDecoration(
+                                                hintText: 'Cost Price',
+                                                labelText: 'Cost Price',
+                                                border: OutlineInputBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(6.0),
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                          Container(
+                                            width: width * 0.15,
+                                            child: TextFormField(
+                                              keyboardType: TextInputType.number,
+                                              controller: rPrice,
+                                              validator: (val) {
+                                                if (val!.isEmpty) {
+                                                  return "Enter price";
+                                                } else {
+                                                  return null;
+                                                }
+                                              },
+                                              decoration: InputDecoration(
+                                                hintText: 'Retail Price',
+                                                labelText: 'Retail Price',
+                                                border: OutlineInputBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(6.0),
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                          Container(
+                                            width: width * 0.15,
+                                            child: TextFormField(
+                                              keyboardType: TextInputType.number,
+                                              controller: wPrice,
+                                              validator: (val) {
+                                                if (val!.isEmpty) {
+                                                  return "Enter price";
+                                                } else {
+                                                  return null;
+                                                }
+                                              },
+                                              decoration: InputDecoration(
+                                                hintText: ' Wholesale Price ',
+                                                labelText: ' Wholesale Price',
+                                                border: OutlineInputBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(6.0),
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                          Container(
+                                            width: width * 0.15,
+                                            child: TextFormField(
+                                              keyboardType: TextInputType.number,
+                                              controller: quantity,
+                                              validator: (val) {
+                                                if (val!.isEmpty) {
+                                                  return "Enter Quantity";
+                                                } else {
+                                                  return null;
+                                                }
+                                              },
+                                              decoration: InputDecoration(
+                                                hintText: ' Quantity ',
+                                                labelText: ' Quantity',
+                                                border: OutlineInputBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(6.0),
+                                                ),
+                                              ),
+                                            ),
+                                          ),
                                         ],
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: height * 0.0229,
-                                    ),
-                                    TextFormField(
-                                      controller: descE,
-                                      validator: (val) {
-                                        if (val!.isEmpty) {
-                                          return "Product Details";
-                                        } else {
-                                          return null;
-                                        }
-                                      },
-                                      decoration: InputDecoration(
-                                        hintText: 'Description',
-                                        labelText: 'Description',
-                                        border: OutlineInputBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(6.0),
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: height * 0.0229,
-                                    ),
-                                    TextFormField(
-                                      controller: descK,
-                                      validator: (val) {
-                                        if (val!.isEmpty) {
-                                          return "وردەکاری کالا";
-                                        } else {
-                                          return null;
-                                        }
-                                      },
-                                      decoration: InputDecoration(
-                                        hintText: 'وردەکاری',
-                                        labelText: 'وردەکاری',
-                                        border: OutlineInputBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(6.0),
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: height * 0.0229,
-                                    ),
-                                    TextFormField(
-                                      controller: descA,
-                                      validator: (val) {
-                                        if (val!.isEmpty) {
-                                          return "تفاصيل السلع";
-                                        } else {
-                                          return null;
-                                        }
-                                      },
-                                      decoration: InputDecoration(
-                                        hintText: 'وصف',
-                                        labelText: 'وصف',
-                                        border: OutlineInputBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(6.0),
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: height * 0.0229,
-                                    ),
-                                    //prices
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Container(
-                                          width: width * 0.15,
-                                          child: TextFormField(
-                                            keyboardType: TextInputType.number,
-                                            controller: cPrice,
-                                            validator: (val) {
-                                              if (val!.isEmpty) {
-                                                return "Enter price";
-                                              } else {
-                                                return null;
-                                              }
-                                            },
-                                            decoration: InputDecoration(
-                                              hintText: 'Cost Price',
-                                              labelText: 'Cost Price',
-                                              border: OutlineInputBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(6.0),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          width: width * 0.15,
-                                          child: TextFormField(
-                                            keyboardType: TextInputType.number,
-                                            controller: rPrice,
-                                            validator: (val) {
-                                              if (val!.isEmpty) {
-                                                return "Enter price";
-                                              } else {
-                                                return null;
-                                              }
-                                            },
-                                            decoration: InputDecoration(
-                                              hintText: 'Retail Price',
-                                              labelText: 'Retail Price',
-                                              border: OutlineInputBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(6.0),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          width: width * 0.15,
-                                          child: TextFormField(
-                                            keyboardType: TextInputType.number,
-                                            controller: wPrice,
-                                            validator: (val) {
-                                              if (val!.isEmpty) {
-                                                return "Enter price";
-                                              } else {
-                                                return null;
-                                              }
-                                            },
-                                            decoration: InputDecoration(
-                                              hintText: ' Wholesale Price ',
-                                              labelText: ' Wholesale Price',
-                                              border: OutlineInputBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(6.0),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          width: width * 0.15,
-                                          child: TextFormField(
-                                            keyboardType: TextInputType.number,
-                                            controller: quantity,
-                                            validator: (val) {
-                                              if (val!.isEmpty) {
-                                                return "Enter Quantity";
-                                              } else {
-                                                return null;
-                                              }
-                                            },
-                                            decoration: InputDecoration(
-                                              hintText: ' Quantity ',
-                                              labelText: ' Quantity',
-                                              border: OutlineInputBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(6.0),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    )
-                                  ],
+                                      )
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),

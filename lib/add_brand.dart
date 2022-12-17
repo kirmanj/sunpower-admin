@@ -44,21 +44,21 @@ class _AddCategoryState extends State<AddModel> {
         categories = value.docs;
       });
       value.docs.forEach((element) async {
-        Reference storage =
-            FirebaseStorage.instance.ref().child(element['img']);
-        String url = await storage.getDownloadURL();
+        // Reference storage =
+        //     FirebaseStorage.instance.ref().child(element['img']);
+        // String url = await storage.getDownloadURL();
         if (element['make'] == categories[0]['make']) {
           setState(() {
             selectedCategory = element;
           });
-        }
-        setState(() {
-          categories[i] = {
-            'make': element['make'],
-            'img': url,
-            'id': element.id
-          };
-        });
+         }
+        // setState(() {
+        //   categories[i] = {
+        //     'make': element['make'],
+        //     'img': url,
+        //     'id': element.id
+        //   };
+        // });
 
         i++;
       });

@@ -7,16 +7,20 @@ class LoginScreen extends StatefulWidget {
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
+final _formKey = GlobalKey<FormState>();
 
 class _LoginScreenState extends State<LoginScreen> {
-  late String _email, _password, _name;
+   late String _email, _password, _name;
   final auth = FirebaseAuth.instance;
-  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
+
+    List<String> productIDs =[];
+
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: Container(
@@ -150,7 +154,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                             "username": _name,
                                             "email": _email,
                                             'password': _password,
-                                            "role": 1
+                                            "role": 1,
+                                            "phone": "",
+                                            "address": "",
                                           });
                                           Navigator.of(context).pushReplacement(
                                               MaterialPageRoute(
@@ -246,8 +252,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                         scrollDirection: Axis.vertical,
                                         itemCount: snapshot.data.docs.length,
                                         itemBuilder: (context, index) {
-                                          print(snapshot.data.docs[index]
-                                              .data()['username']);
+                                          // print(snapshot.data.docs[index]
+                                          //     .data()['username']);
                                           return Padding(
                                               padding: EdgeInsets.only(
                                                   top: 15,

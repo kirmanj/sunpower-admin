@@ -139,12 +139,15 @@ class _OrderHistoryState extends State<OrderHistory> {
   getCurrentPage(){
     if(selectedIndex == 1){
       return
+        (cancelOrder == null || cancelOrder.isEmpty)?
+        EmptyWidget():
         ListView.builder(
             shrinkWrap: true,
             itemCount: cancelOrder.length,
             itemBuilder: (context, i) {
-              return (cancelOrder[i] != null || cancelOrder[i].isEmpty)
-                  ? ExpansionTile(title: Padding(
+              return
+              //  (cancelOrder[i] != null || cancelOrder[i].isEmpty) ?
+                ExpansionTile(title: Padding(
                 padding:  EdgeInsets.only(bottom: 20),
                 child: Container(
                   // height: 175,
@@ -335,8 +338,8 @@ class _OrderHistoryState extends State<OrderHistory> {
                       ],),
                   )
                 ],
-              )
-                  : EmptyWidget();
+              );
+                 // : EmptyWidget();
             });
 
     }else if (selectedIndex == 0){

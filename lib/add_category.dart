@@ -26,21 +26,26 @@ class _AddCategoryState extends State<AddCategory> {
   var uuid = Uuid();
   List<dynamic> categories = [];
   bool imgLoad = false;
-  getCats() async {
-    FirebaseFirestore.instance.collection("categories").get().then((value) {
-      int i = 0;
-      setState(() {
-        categories = value.docs;
-      });
-      value.docs.forEach((element) async {
-        Reference storage =
-            FirebaseStorage.instance.ref().child(element['img']);
-        String url = await storage.getDownloadURL();
-        setState(() {
-          categories[i] = {'name': element['name'], 'img': url};
-        });
 
-        print(url);
+  getCats() async {
+    FirebaseFirestore.instance
+        .collection("categories")
+        .get()
+        .then((value) {
+      int i = 0;
+
+      value.docs.forEach((element) async {
+        setState(() {
+          categories = value.docs;
+        });
+        // Reference storage =
+        //     FirebaseStorage.instance.ref().child(element['img']);
+        // String url = await storage.getDownloadURL();
+        // setState(() {
+        //   categories[i] = {'name': element['name'], 'img': url};
+        // });
+        //
+        // print(url);
         i++;
       });
 

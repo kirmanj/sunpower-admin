@@ -12,7 +12,7 @@ class _EmptyWidgetState extends State<EmptyWidget> {
 
   @override
   void initState() {
-    Timer(Duration(seconds: 1.5.floor()), () {
+    Timer(Duration(seconds: 2), () {
       if (mounted) {
         setState(() {
           loading = false;
